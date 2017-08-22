@@ -72,6 +72,12 @@ body {
     line-height: rem(3.2);
   }
 
+  .md-base {
+    font-size: $headline-font-size-base;
+    font-weight: 200;
+    line-height: rem(3);
+  }
+
   .md-title {
     @include md-title();
   }

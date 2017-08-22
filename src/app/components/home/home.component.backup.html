@@ -3,17 +3,14 @@
     <md-icon>menu</md-icon>
   </button>
   <td-toolbar td-toolbar-content flex layout="row"></td-toolbar>
-  <!-- POKUS-->
- 
-  <!-- END POKUS-->
-
-  <section class="bgc-blue-grey-900">
+  <section class="bgc-blue-grey-800">
     <div layout="row">
       <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+        <!--<div class="push-top-xl" hide-xs></div>-->
         <!-- MJA - po zakomentovani zadna zasadni zmens, umoznuje popis bloku-->
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
           <div layout="row" layout-align="start center">
-            <h1 class="md-display-1 tc-orange-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
+            <h1 class="md-display-1 tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
               UDI Studio for <span hide-xs>enterprise code automation </span> </h1>
           </div>
           <h2 class="md-headline tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
@@ -27,24 +24,28 @@
         </div>
       </div>
 
-      <div flex="40" flex-xs="20" flex-order-xs="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-right-xl']">
+      <div flex="40" flex-xs="20" flex-order-xs="1" layout-gt-xs="column" layout-align="center center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-right-xl']">
+        <!--<md-icon class="mat-icon-svg-xxl" svgIcon="assets:covalent" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>-->
         <!--   <img src="..\app\assets\images\udi_cg.png">-->
         <!--<br>
           <img src="..\app\assets\images\udi_ia.png">-->
-        <div layout="row" layout-align="end start">
+        <div layout="row" layout-align=" start">
           <h1 class="md-display-1 tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
             <br>
           </h1>
         </div>
         <!-- Icon APP-->
-        <i class="material-icons md-300 orange600">apps</i>
+        <br>
+        <md-icon class="mat-icon-svg-m  fill-orange-600" svgIcon="assets:appcenter" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>
       </div>
     </div>
   </section>
 
-  <section class="bgc-blue-grey-600">
+  <section class="bgc-blue-grey-500">
     <div layout="row">
       <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+        <!--<div class="push-top-xl" hide-xs></div>-->
+        <!-- MJA - po zakomentovani zadna zasadni zmens, umoznuje popis bloku-->
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
           <td-expansion-panel-group>
             <td-expansion-panel label="" sublabel="definition and values">
@@ -58,15 +59,15 @@
                   <md-icon class="tc-blue-700">filter_1</md-icon>
                 </div>
                 <div class="md-padding">
-                  <td-markdown>
-                    * Code Automation is an understood as specific practices values that has been proven to help organizations
+                  <ul>
+                    <li>Code Automation is an understood as specific practices values that has been proven to help organizations
                       of all sizes improve their speed of code built, increasing code quality, elimination reverse engineering
-                      and define common governance for development and analyze process.
-                    * The independent code automation principles and tools are opening ability to use it for any code development
-                      in any frameworks and for rapid and traditional software delivery methodologies. 
-                    * Code automation beneficial effects go to positive impact for financial results go beyond financial results.
-                      Key positive effect is "more work in a short time with quicker repeatability". 
-                  </td-markdown>
+                      and define common governance for development and analyze process.</li>
+                    <li>The independent code automation principles and tools are opening ability to use it for any code development
+                      in any frameworks and for rapid and traditional software delivery methodologies. </li>
+                    <li>Code automation beneficial effects go to positive impact for financial results go beyond financial results.
+                      Key positive effect is "more work in a short time with quicker repeatability". </li>
+                  </ul>
                 </div>
               </div>
             </td-expansion-panel>
@@ -81,24 +82,24 @@
                   <md-icon class="tc-blue-700">filter_2</md-icon>
                 </div>
                 <div class="md-padding">
-                  <td-markdown>
-                    * Automation is a huge asset for organizations
-                    * The unlimited architecture landscape and specific tools with possibility to change all in future without
-                      lost analyze values are perfect advocated position for code automation
-                    * Code automation requires to adopt the advance model driven methodology or with the basic technical metadata
+                  <ul>
+                    <li>Automation is a huge asset for organizations</li>
+                    <li>The unlimited architecture landscape and specific tools with possibility to change all in future without
+                      lost analyze values are perfect advocated position for code automation</li>
+                    <li>Code automation requires to adopt the advance model driven methodology or with the basic technical metadata
                       driven methodology determine the level of final performance and the level of effect opposite the manual
-                      or semi-manual code development
-                    * High-performance teams continue to achieve rapid development and better stability
-                    * Code Automation is a general direction to open for use future progressive techniques like machine learning
-                      algorithms (code generates code)
-                  </td-markdown>
+                      or semi-manual code development</li>
+                    <li>High-performance teams continue to achieve rapid development and better stability</li>
+                    <li>Code Automation is a general direction to open for use future progressive techniques like machine learning
+                      algorithms (code generates code)</li>
+                  </ul>
                 </div>
               </div>
             </td-expansion-panel>
             <td-expansion-panel label="" sublabel="teradata solution basic introduction">
               <ng-template td-expansion-panel-label>
                 <md-icon>star</md-icon>
-                <span><b>Code Automation with UDI Studio</b></span>
+                <span><b>Code Automation with UDI Studio?</b></span>
               </ng-template>
               <div layout="row">
                 <div class="md-padding">
@@ -106,20 +107,26 @@
                   <md-icon class="tc-blue-700">filter_3</md-icon>
                 </div>
                 <div class="md-padding">
-                  <td-markdown>
-                    * Background
-                        * The purpose of with UDI Studio is to achieve Code Automation independent of technology, tool or architecture.
-                        The key dependency is join with inputs of the process. This is metadata and its guaranteed quality.
-                    * Target
-                        * The UDI Studio provide capability for auto or manually generate scripts, tests, documentation and others
-                        determined outputs from metadata. 
-                        * The concept targets are to use as an isolate and reusable component for different delivery approaches
+                  <ul>
+                    <li>Background</li>
+                    <ul>
+                      <li>The purpose of with UDI Studio is to achieve Code Automation independent of technology, tool or architecture.
+                        The key dependency is join with inputs of the process. This is metadata and its guaranteed quality.</li>
+                    </ul>
+                    <li>Target</li>
+                    <ul>
+                      <li>The UDI Studio provide capability for auto or manually generate scripts, tests, documentation and others
+                        determined outputs from metadata. </li>
+                      <li>The concept targets are to use as an isolate and reusable component for different delivery approaches
                         or methodologies like DevOps. The concept supports interfaces for delivered inputs and finally for
-                        outputs via versioning systems as an independent and transparent team and tools cooperation platforms.
-                    * Intelectual Property Ownership
-                        * Teradata/Enterprise Data Consulting own the IP for this tool and make it available to customers for
-                        adoption and roll out.
-                  </td-markdown>
+                        outputs via versioning systems as an independent and transparent team and tools cooperation platforms.</li>
+                    </ul>
+                    <li>Intelectual Property Ownership</li>
+                    <ul>
+                      <li>Teradata/Enterprise Data Consulting own the IP for this tool and make it available to customers for
+                        adoption and roll out.</li>
+                    </ul>
+                  </ul>
                 </div>
               </div>
             </td-expansion-panel>
@@ -144,10 +151,10 @@
 
               </div>
             </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="what is and what isn't the tool?">
+            <td-expansion-panel label="" sublabel="what are benefits?">
               <ng-template td-expansion-panel-label>
                 <md-icon>star</md-icon>
-                <span><b>What is UDI Studio?</b></span>
+                <span><b>Why UDI Studio?</b></span>
               </ng-template>
               <div layout="row">
                 <div class="md-padding">
@@ -156,43 +163,18 @@
                   <!--MJA - ikona palec nahoru-->
                 </div>
                 <div class="md-padding">
-                  <span>UDI Studio is:</span>
-                  <td-markdown>
-                    * Accelerator - for code development and code maintenance
-                    * Development Environment- effectively automate code creation
-                    * Metadata base processor - works with metadata database or transformation - not actual data
-                  </td-markdown>
-                  <span>UDI Studio is not:</span>
-                  <td-markdown>
-                    * ETL Tool, Data ingestion tool, Pre-built architecture
-                  </td-markdown>
-                </div>
-              </div>
-            </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="what are benefits?">
-              <ng-template td-expansion-panel-label>
-                <md-icon>star</md-icon>
-                <span><b>Why UDI Studio?</b></span>
-              </ng-template>
-              <div layout="row">
-                <div class="md-padding">
-                  <md-icon class="tc-blue-700">filter_6</md-icon>
-                  <!--<md-icon class="tc-green-700">thumb_up</md-icon>-->
-                  <!--MJA - ikona palec nahoru-->
-                </div>
-                <div class="md-padding">
                   <span>Features:</span>
-                  <td-markdown>
-                    * Common governance of data storage solutions using UDI framework
-                    * Software Development Lifecycle support
-                    * General methodology for
-                    * Support of various development principles
-                    * Technologically independent
-                    * Automatic output generation
-                    * Licensed and supported automation tools
-                    * Matured solution with references
-                    * Adoption of existing solution architecture
-                  </td-markdown>
+                  <ul>
+                    <li>Common governance of data storage solutions using UDI framework</li>
+                    <li>Software Development Lifecycle support</li>
+                    <li>General methodology for</li>
+                    <li>Support of various development principles</li>
+                    <li>Technologically independent</li>
+                    <li>Automatic output generation</li>
+                    <li>Licensed and supported automation tools</li>
+                    <li>Matured solution with references</li>
+                    <li>Adoption of existing solution architecture</li>
+                  </ul>
                 </div>
               </div>
             </td-expansion-panel>
@@ -203,191 +185,91 @@
     </div>
   </section>
 
+<!-- MJA - sekce navigacniho baru s malz=ymi ikonami-->
+  <md-toolbar color="primary">
+ 
+  </md-toolbar>
+  <section class="bgc-blue-grey-100">
+    <div layout-gt-xs="row">
+      <div flex class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad']">
+        <div class="push-top-md" hide-xs></div>
+        <div tdMediaToggle="gt-sm" [mediaClasses]="['push']">
+          <!--<md-nav-list hide-gt-md>-->
+          <!-- MJA - nic se po zakomentovani nestalo-->
+          <!--<ng-template let-item let-last="last" ngFor [ngForOf]="sections">-->
+          <!-- MJA - nic se po zakomentovani nestalo-->
+          <!--<a md-list-item [routerLink]="[item.route]">-->
+          <!-- MJA - nic se po zakomentovani nestalo-->
+          <!--<md-icon md-list-avatar><span class="tc-{{item.color}}">{{item.icon}}</span></md-icon>-->
+          <!-- MJA - nic se po zakomentovani nestalo-->
+          <!--<h3 class="tc-blue-grey-900" md-line> {{item.title}} </h3>-->
+          <!-- MJA - nic se po zakomentovani nestalo-->
+          <!--<p class="tc-blue-grey-700" md-line> {{item.description}} </p>-->
+          <!-- MJA - nic se po zakomentovani nestalo-->
+          <!--</a>-->
+          <!--<md-divider *ngIf="!last" md-inset></md-divider>-->
+          <!-- MJA - nic se po zakomentovani nestalo-->
+          <!--</ng-template>-->
+          <!--</md-nav-list>-->
+          <div layout="row" layout-wrap hide-xs hide-sm hide-md>
+            <ng-template let-item let-last="last" ngFor [ngForOf]="sections">
+              <!--MJA - nasmerovano do /home.components.ts do casti "section. Pouzity ngFor cyklus pro vypis vsech casti"-->
+              <!--MJA - icony jsou pouzite ze seznamu stylu src/platform/core/common/styles/font/codepoints-->
+              <div flex-gt-sm="20" class="pad-sm">
+                <a [routerLink]="[item.route]" md-button class="pad">
 
-  <!--MJA - sekce pro architeckturu UDI Studia - obrazek vlevo, text vpravo-->
-  <section class="bgc-blue-grey-800 tc-white">
-    <div layout="row">
-      <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
-        <!--<div class="push-top-xxl" hide-xs></div>-->
-        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h2 class="md-display-1 tc-orange-600 push-top-xs push-bottom-sm">UDI Studio
-            <md-icon>favorite</md-icon> architecture</h2>
-          <h4 class="md-headline tc-blue-grey-100 push-top-xs push-bottom-sm">
-            <td-markdown>
-              * UDI studio is a Java NetBeans platform based tool extensible by plugins. * Usually used as desktop Java application on
-              client computer * UDI studio supports standard Java connectors for structured data and metadata sources (Teradata,
-              Oracle, MS SQL, Derby, Hive,…) * Team based cooperation features allow * Parallel team development via version
-              control native integration * Reusability of approaches from delivered projects
-            </td-markdown>
-          </h4>
-          <img src="..\app\assets\images\udi_architecture_black.png" width="90%" height="90%" />
-        </div>
-      </div>
-      <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
-        <div layout-align="start center">
-          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
-          <i class="material-icons md-300 orange600">settings_overscan</i>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--MJA - konec sekce pro architeckturu UDI Studia - obrazek vlevo, text vpravo-->
-
-  <!--MJA - sekce pro List vlastnosti architecktury UDI Studia-->
-  <section class="bgc-blue-grey-500">
-    <div layout="row">
-      <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
-        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <td-expansion-panel-group>
-            <td-expansion-panel label="" sublabel="definition and values">
-              <ng-template td-expansion-panel-label>
-                <md-icon>filter_list</md-icon>
-                <span><b> UDI Studio - Local Computer</b></span>
-              </ng-template>
-              <div layout="row">
-                <div class="md-padding">
-                  <p>Engine</p>
-                  <td-markdown>
-                    * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                    their speed of code built, increasing code quality, elimination reverse engineering and define common
-                    governance for development and analyze process. 
-                    ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                    3.xx.xx-setup.exe 
-                    ```
-                  </td-markdown>
-                  <br>
-                  <p>Metadata - Local folder</p>
-                  <td-markdown>
-                      * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                      their speed of code built, increasing code quality, elimination reverse engineering and define common
-                      governance for development and analyze process. 
-                      ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                      3.xx.xx-setup.exe 
-                      ```
-                    </td-markdown>
-                </div>
-              </div>
-            </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="definition and values">
-              <ng-template td-expansion-panel-label>
-                <md-icon>filter_list</md-icon>
-                <span><b> UDI Studio Metadata - Remote Server</b></span>
-              </ng-template>
-              <div layout="row">
-                <div class="md-padding">
-                    <p>Metadata Remote storage</p>
-                    <td-markdown>
-                        * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                        their speed of code built, increasing code quality, elimination reverse engineering and define common
-                        governance for development and analyze process. 
-                        ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                        3.xx.xx-setup.exe 
-                        ```
-                      </td-markdown>
-                      <p>Team Based Environment</p>
-                      <td-markdown>
-                          * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                          their speed of code built, increasing code quality, elimination reverse engineering and define common
-                          governance for development and analyze process. 
-                          ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                          3.xx.xx-setup.exe 
-                          ```
-                        </td-markdown>
-                </div>
-              </div>
-            </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="components and results overview">
-                <ng-template td-expansion-panel-label>
-                  <md-icon>filter_list</md-icon>
-                  <span><b> UDI Studio Principles</b></span>
-                </ng-template>
-                <div layout="row">
-                  <div class="md-padding">
-                    <img src="..\app\assets\images\udi_architecture_princ.png" />
+                  <div layout="row" layout-align="start center" class="push-bottom-xs">
+                    <!-- MJA obsahuje volani ikony a nadpisu-->
+                    <md-icon class="push-right-sm">
+                      <!--push-right-sm MJA znamena mezeru mezi ikonou a textem-->
+                      <span class="tc-{{item.color}}">{{item.icon}}</span>
+                      <!-- MJA obsahuje volani ikony-->
+                    </md-icon>
+                    <div class="md-title text-xl tc-blue-grey-900">{{item.title}}</div>
+                    <!-- MJA obsahuje volani nadpisu-->
                   </div>
-                </div>
-              </td-expansion-panel>
-          </td-expansion-panel-group>
+
+                  <div class="md-subhead tc-blue-grey-700 text-wrap text-left" hide-sm hide-md> {{item.description}} </div>
+                </a>
+              </div>
+            </ng-template>
+          </div>
         </div>
+        <div class="push-bottom-md" hide-xs></div>
       </div>
     </div>
   </section>
-  <!--MJA - konec sekce pro List vlastnosti architecktury UDI Studia -->
+<!--MJA - konec sekce navigacniho baru s malymi ikonami-->
 
-  <!--MJA - sekce pro IMPACT ANALYSER UDI Studia - obrazek vlevo, text vpravo-->
-  <section class="bgc-blue-grey-100">
+<!--MJA - sekce pro architeckturu UDI Studia-->
+  <section class="bgc-blue-grey-100 tc-white">
     <div layout="row">
-      <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
+      <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
         <div class="push-top-xxl" hide-xs></div>
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Impact Analyser - UDI Studio plugin</h2>
-          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
-            <td-markdown>
-              * Extracts analytical metadata from various analytical and mapping documents and tools (Power Designer, Erwin, XML, Excel…)
-              * Populates shared analytical metadata repository for further usage * Works with object dependencies and hierarchies
-              * Detects change impacts on code and database structures through entire solution * Clearly determines scope
-              for development, testing and deployment phases * Provides full and diff customizable reports by comparison
-              of any versions of analytical metadata
-            </td-markdown>
-            <br><img src="..\app\assets\images\udi_architecture_ia.png" width="90%" height="90%" />
-          </h4>
+          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm">Built with
+            <md-icon>favorite</md-icon> on Angular</h2>
+          <h3 class="md-headline tc-blue-grey-100 push-top-xs push-bottom-sm">Teradata is one of the largest enterprise consumers of Angular. Currently the entire product suite is being built
+            or revamped on Angular v4.</h3>
+          <h4 class="md-headline tc-blue-grey-200 push-top-xs push-bottom-sm" hide-xs>As Angular unites Teradata developers across the organization, they are able to contribute back to the open-source
+            community with the powerful new tools being developed internally.</h4>
+          <br>
+          <img src="..\app\assets\images\udi_cg.png">
+
+
         </div>
         <div class="push-bottom-xl" hide-xs></div>
       </div>
-      <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
-        <div class="push-top-xxl" hide-xs></div>
-        <div layout-align="start center">
-          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
-          <i class="material-icons md-300 blue600">storage</i>
-        </div>
+
+      <div flex="40" flex-xs="20" flex-order-xs="1" layout-gt-xs="column" layout-align="center start" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-right-xl']">
+        <md-icon class="mat-icon-svg-xxl fill-red-500" svgIcon="assets:angular-outline" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>
       </div>
+
     </div>
   </section>
-  <!--MJA - konec sekce pro IMPACT ANALYSER UDI Studia - obrazek vlevo, text vpravo-->
+<!--MJA - konec sekce pro architeckturu UDI Studia-->
 
-  <!--MJA - sekce pauza-->
-  <section class="bgc-blue-grey-500">
-    <div layout="row">
-      <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
-      </div>
-    </div>
-  </section>
-  <!--MJA - konec sekce pauza-->
-
-  <!--MJA - sekce pro CODE GENERATOR UDI Studia - obrazek vlevo, text vpravo-->
-  <section class="bgc-blue-grey-100">
-    <div layout="row">
-      <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
-        <div class="push-top-xxl" hide-xs></div>
-        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Code Generator - UDI Studio plugin</h2>
-          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
-            <td-markdown>
-              * Automate everything * Strong and customizable metadata support * Output is tailored to your architecture & environment
-              * Agile development and Self-service support * Impact analyzer connectivity for even maintaining code up-to
-              date * Create templates and generate: * Scripts, DDLs, SQLs, TPT, XML * DI Tools objects via APIs * Transformations,
-              tests, dependencies * Offers complex template logic * From string replacement to program
-            </td-markdown>
-          </h4>
-          <br><img src="..\app\assets\images\udi_architecture_cg.png" width="90%" height="90%" />
-        </div>
-        <div class="push-bottom-xl" hide-xs></div>
-      </div>
-      <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
-        <!--<md-icon class="mat-icon-svg-xxl fill-green-A700" svgIcon="assets:material-outline" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>-->
-        <div class="push-top-xxl" hide-xs></div>
-        <div layout-align="start center">
-          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
-          <!--<br><img src="..\app\assets\images\udi_cg.png">-->
-          <i class="material-icons md-300 blue600">settings</i>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--MJA - konec sekce pro CODE GENERATOR UDI Studia - obrazek vlevo, text vpravo-->
-
-  <!--MJA - sekce tool baru s vetsimi ikonami-->
-  <!--
+<!--MJA - sekce tool baru s vetsimi ikonami-->
   <section class="bgc-blue-grey-900">
     <div layout-gt-xs="row">
       <div flex class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad']">
@@ -425,21 +307,25 @@
       </div>
     </div>
   </section>
--->
-  <!--MJA - konec sekce tool baru s vetsimi ikonami-->
-  
-  <!--MJA - pauza/mezera mezi bloky-->
-  <!--
-  <section class="bgc-blue-grey-500">
+<!--MJA - konec sekce tool baru s vetsimi ikonami-->
+
+  <section class="bgc-blue-grey-100">
     <div layout="row">
-      <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+      <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
+        <div class="push-top-xxl" hide-xs></div>
+        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
+          <h2 class="md-display-1 tc-green-A700 push-top-xs push-bottom-sm">Following the Material Design spec</h2>
+          <h3 class="md-headline tc-blue-grey-700 push-top-xs push-bottom-sm">Covalent follows the Material Design specification as closely as possible through the construction of all components.</h3>
+          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>Adopting Material Design as our own spec allows our UI/UX staff to adopt and share powerful open-source resources,
+            while Covalent end users enjoy the immediate familiarity and affordance of this global deign spec.</h4>
+        </div>
+        <div class="push-bottom-xl" hide-xs></div>
+      </div>
+      <div flex="40" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="center start" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
+        <md-icon class="mat-icon-svg-xxl fill-green-A700" svgIcon="assets:material-outline" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>
       </div>
     </div>
-  </section>-->
-  <!--MJA - konec pauza/mezera mezi bloky-->
-
-  <!--MJA - sekce pro FQs -->
-  <!--
+  </section>
   <section class="theme-dark tc-white bgc-blue-grey-900">
     <div layout-gt-xs="row">
       <div flex class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
@@ -616,12 +502,9 @@
       </div>
     </div>
   </section>
--->
- <!--MJA - konec sekce pro FQs -->
-
   <td-layout-footer color="primary" tdMediaToggle="xs" [mediaClasses]="['text-center']">
     <div layout-gt-xs="row" layout-align="start center">
-      <div class="md-caption">Copyright &copy; 2017 Teradata. All rights reserved</div>
+      <div class="md-caption">Copyright &copy; 2016 - 2017 Teradata. All rights reserved</div>
       <span flex></span>
       <div layout-gt-xs="row">
         <a href="https://gitter.im/Teradata/covalent" target="_blank" md-button class="text-upper">Gitter Chat</a>

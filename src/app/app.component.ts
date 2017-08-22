@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { getSelectedLanguage } from './utilities/translate';
 import { getDirection } from './utilities/direction';
 
+
 @Component({
   selector: 'docs-covalent',
   templateUrl: './app.component.html',
@@ -78,6 +79,8 @@ export class DocsAppComponent implements AfterViewInit {
       this._domSanitizer.bypassSecurityTrustResourceUrl('app/assets/icons/listener.svg'));
     this._iconRegistry.addSvgIconInNamespace('assets', 'querygrid',
       this._domSanitizer.bypassSecurityTrustResourceUrl('app/assets/icons/querygrid.svg'));
+    this._iconRegistry.addSvgIconInNamespace('assets', 'openwith',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('app/assets/icons/ic_open_with_white_18px.svg'));
 
     // set direction
     this.dir = getDirection();

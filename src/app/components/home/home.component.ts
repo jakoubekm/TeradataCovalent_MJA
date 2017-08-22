@@ -40,7 +40,7 @@ export class HomeComponent implements AfterViewInit {
       description: 'Teradata brand logo usage, color palettes and more',
       icon: 'color_lens',
       route: 'style-guide',
-      title: 'Style Guide',
+      title: 'Style GuideXXX',
     }, {
       color: 'green-A700',
       description: 'Gallery of example applications and usages',
@@ -81,3 +81,4 @@ export class HomeComponent implements AfterViewInit {
   }
 
 }
+
