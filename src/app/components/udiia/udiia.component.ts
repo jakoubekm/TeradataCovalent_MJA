@@ -7,22 +7,22 @@ import { Observable } from 'rxjs/Observable';
 import { InternalDocsService, ITemplate } from '../../services';
 
 @Component({
-  selector: 'app-templates',
-  styleUrls: ['./templates.component.scss'],
-  templateUrl: './templates.component.html',
+  selector: 'app-udiia', //MJA co s timto - pokusil jsem se to prejmenovat?
+  styleUrls: ['./udiia.component.scss'],
+  templateUrl: './udiia.component.html',
   animations: [fadeAnimation],
 })
-export class TemplatesComponent implements AfterViewInit {
+export class UdiIaComponent implements AfterViewInit {
 
   @HostBinding('@routeAnimation') routeAnimation: boolean = true;
   @HostBinding('class.td-route-animation') classAnimation: boolean = true;
 
-  templatesObs: Observable<ITemplate[]>;
+ udiiaObs: Observable<ITemplate[]>;
 
   constructor(public media: TdMediaService,
               private _changeDetectorRef: ChangeDetectorRef,
               private _internalDocsService: InternalDocsService) {
-    this.templatesObs = this._internalDocsService.queryTemplates();
+    this.udiiaObs = this._internalDocsService.queryTemplates();
   }
 
   ngAfterViewInit(): void {

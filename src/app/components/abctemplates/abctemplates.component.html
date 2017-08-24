@@ -1,0 +1,81 @@
+<td-layout-nav logo="assets:teradata" toolbarTitle="UDI Studio - Impact Analyzer" navigationRoute="/">
+    <button md-icon-button td-menu-button tdLayoutToggle>
+        <md-icon>menu</md-icon>
+    </button>
+    <td-toolbar td-toolbar-content flex layout="row"></td-toolbar>
+      <!--MJA - sekce pauza-->
+      <section class="bgc-blue-grey-500">
+            <div layout="row">
+              <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+              </div>
+            </div>
+          </section>
+          <!--MJA - konec sekce pauza-->
+<!--MJA - sekce pro IMPACT ANALYSER UDI Studia - obrazek vlevo, text vpravo-->
+<section class="bgc-blue-grey-100">
+        <div layout="row">
+          <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
+            <div class="push-top-xxl" hide-xs></div>
+            <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
+              <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Impact Analyser - UDI Studio plugin</h2>
+              <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
+                <td-markdown>
+                  * Extracts analytical metadata from various analytical and mapping documents and tools (Power Designer, Erwin, XML, Excel…)
+                  * Populates shared analytical metadata repository for further usage * Works with object dependencies and hierarchies
+                  * Detects change impacts on code and database structures through entire solution * Clearly determines scope
+                  for development, testing and deployment phases * Provides full and diff customizable reports by comparison
+                  of any versions of analytical metadata
+                </td-markdown>
+                <br><img src="..\app\assets\images\udi_architecture_ia.png" width="90%" height="90%" />
+              </h4>
+            </div>
+            <div class="push-bottom-xl" hide-xs></div>
+          </div>
+          <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
+            <div class="push-top-xxl" hide-xs></div>
+            <div layout-align="start center">
+              <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
+              <i class="material-icons md-300 blue600">storage</i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--MJA - konec sekce pro IMPACT ANALYSER UDI Studia - obrazek vlevo, text vpravo-->
+    
+      <!--MJA - sekce pauza-->
+      <section class="bgc-blue-grey-500">
+        <div layout="row">
+          <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+          </div>
+        </div>
+      </section>
+      <!--MJA - konec sekce pauza-->
+    <!-- original
+    <section class="bgc-blue-grey-600 md-whiteframe-z1">
+        <div layout-gt-xs="row" layout-align="center center">
+            <div flex-gt-xs="80" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-lg']">
+                <h2 class="md-display-1 push-bottom-none tc-blue-grey-50">Covalent Templates</h2>
+                <h3 class="md-headline push-top-xs tc-blue-grey-200">Example starter templates for your application</h3>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div layout-gt-xs="row" layout-align="center center">
+            <div flex-gt-xs="80" class="pad" tdMediaToggle="gt-sm" [mediaClasses]="['pad-lg']">
+                <md-grid-list [cols]="(media.registerQuery('gt-xs') | async) ? 2 : 1" [gutterSize]="(media.registerQuery('gt-sm') | async) ? 25 : 10" [rowHeight]="(media.registerQuery('gt-sm') | async) ? '335px' : '240px'">
+                    <md-grid-tile *ngFor="let template of templatesObs | async" mdTooltip="View Plunker" mdTooltipPosition="above" md-ripple class="md-whiteframe-z3">
+                        <a [href]="template.plnkr" target="_blank" [class]="'bgc-' + template.color">
+                            <img [src]="template.img">
+                            <md-grid-tile-footer>
+                                <h3 md-line>{{template.name}}</h3>
+                                <span md-line>{{template.description}}</span>
+                                <md-icon>launch</md-icon>
+                            </md-grid-tile-footer>
+                        </a>
+                    </md-grid-tile>
+                </md-grid-list>
+            </div>
+        </div>
+    </section>
+-->
+</td-layout-nav>

@@ -1,46 +1,59 @@
 <td-layout-nav logo="assets:teradata" toolbarTitle="UDI Studio">
   <button md-icon-button td-menu-button tdLayoutToggle>
+    <!--tdLayoutToggle - obsahuje rolovaci menu umistene pod ikonou menu.
+    './app.component.ts' - obsahuje hodnoty menu a route odkazy,
+    './app.component.html' - obsahuje volani route. Sekce Home je pevna, ostatni casti jsou volany cyklem ngFor,
+    './app.component.scss',
+    ./app.routes.ts - obsahuje logiku volani modulu s path na ktere ma byt presmerovani dokonceno ??? !!!! Nejasne jak menit !!!
+    -->
     <md-icon>menu</md-icon>
   </button>
-  <td-toolbar td-toolbar-content flex layout="row"></td-toolbar>
+  <!--<td-toolbar td-toolbar-content flex layout="row"></td-toolbar>-->
+  <!--MJA - toolbar component - horizontal right section - ../toolbar/toolbar.component.html-->
   <!-- POKUS-->
- 
-  <!-- END POKUS-->
 
+
+  
+    <!-- END POKUS-->
+  
+  
+  
+  <!-- START -->
   <section class="bgc-blue-grey-900">
-    <div layout="row">
-      <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
-        <!-- MJA - po zakomentovani zadna zasadni zmens, umoznuje popis bloku-->
-        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <div layout="row" layout-align="start center">
-            <h1 class="md-display-1 tc-orange-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
-              UDI Studio for <span hide-xs>enterprise code automation </span> </h1>
+      <div layout="row">
+        <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+          <!-- MJA - po zakomentovani zadna zasadni zmens, umoznuje popis bloku-->
+          <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
+            <div layout="row" layout-align="start center">
+              <h1 class="md-display-1 tc-orange-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
+                UDI Studio for <span hide-xs>enterprise code automation </span> </h1>
+            </div>
+            <h2 class="md-headline tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
+              Teradata has developed a unique approach to building data storage solutions that support a common governance framework for
+              modeling, analysis, code development and testing across the entire data storage solution in heterogeneous environments.
+              This approach is called the Unified Data Integration (UDI) Framework.
+              <br><br> The approach is supported via product UDI Studio. The UDI studio is an installable application based
+              on Java includes a few plugins which support the model driven and templates methodology.
+            </h2>
+            <div class="push-top-xl" hide-xs></div>
+            </div>
           </div>
-          <h2 class="md-headline tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
-            Teradata has developed a unique approach to building data storage solutions that support a common governance framework for
-            modeling, analysis, code development and testing across the entire data storage solution in heterogeneous environments.
-            This approach is called the Unified Data Integration (UDI) Framework.
-            <br><br> The approach is supported via product UDI Studio. The UDI studio is an installable application based
-            on Java includes a few plugins which support the model driven and templates methodology.
-          </h2>
-          <div class="push-top-xl" hide-xs></div>
-        </div>
-      </div>
 
-      <div flex="40" flex-xs="20" flex-order-xs="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-right-xl']">
-        <!--   <img src="..\app\assets\images\udi_cg.png">-->
-        <!--<br>
-          <img src="..\app\assets\images\udi_ia.png">-->
-        <div layout="row" layout-align="end start">
-          <h1 class="md-display-1 tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
-            <br>
-          </h1>
+  
+        <div flex="40" flex-xs="20" flex-order-xs="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-right-xl']">
+          <!--   <img src="..\app\assets\images\udi_cg.png">-->
+          <!--<br>
+            <img src="..\app\assets\images\udi_ia.png">-->
+          <div layout="row" layout-align="end start">
+            <h1 class="md-display-1 tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
+              <br>
+            </h1>
+          </div>
+          <!-- Icon APP-->
+          <i class="material-icons md-300 orange600">apps</i>
         </div>
-        <!-- Icon APP-->
-        <i class="material-icons md-300 orange600">apps</i>
       </div>
-    </div>
-  </section>
+    </section>
 
   <section class="bgc-blue-grey-600">
     <div layout="row">
@@ -214,10 +227,12 @@
             <md-icon>favorite</md-icon> architecture</h2>
           <h4 class="md-headline tc-blue-grey-100 push-top-xs push-bottom-sm">
             <td-markdown>
-              * UDI studio is a Java NetBeans platform based tool extensible by plugins. * Usually used as desktop Java application on
-              client computer * UDI studio supports standard Java connectors for structured data and metadata sources (Teradata,
-              Oracle, MS SQL, Derby, Hive,…) * Team based cooperation features allow * Parallel team development via version
-              control native integration * Reusability of approaches from delivered projects
+              * UDI studio is a Java NetBeans platform based tool extensible by plugins. 
+              * Usually used as desktop Java application on client computer 
+              * UDI studio supports standard Java connectors for structured data and metadata sources (Teradata, Oracle, MS SQL, Derby, Hive,…) 
+              * Team based cooperation features allow 
+              * Parallel team development via versio control native integration 
+              * Reusability of approaches from delivered projects
             </td-markdown>
           </h4>
           <img src="..\app\assets\images\udi_architecture_black.png" width="90%" height="90%" />
@@ -324,13 +339,19 @@
           <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
             <td-markdown>
               * Extracts analytical metadata from various analytical and mapping documents and tools (Power Designer, Erwin, XML, Excel…)
-              * Populates shared analytical metadata repository for further usage * Works with object dependencies and hierarchies
-              * Detects change impacts on code and database structures through entire solution * Clearly determines scope
-              for development, testing and deployment phases * Provides full and diff customizable reports by comparison
-              of any versions of analytical metadata
+              * Populates shared analytical metadata repository for further usage 
+              * Works with object dependencies and hierarchies
+              * Detects change impacts on code and database structures through entire solution 
+              * Clearly determines scope for development, testing and deployment phases 
+              * Provides full and diff customizable reports by comparison of any versions of analytical metadata
             </td-markdown>
             <br><img src="..\app\assets\images\udi_architecture_ia.png" width="90%" height="90%" />
           </h4>
+          <button md-raised-button color="orange" class="text-upper" tdMediaToggle="gt-xs" [mediaClasses]="['text-xxl']" [routerLink]="['/udiia']">See More...</button>
+          <!--<a md-raised-button color="primary" class="push-left" tdMediaToggle="gt-xs" [mediaClasses]="['text-xxl']" mdTooltip="Star us on Github!" mdTooltipPosition="below" href="https://github.com/Teradata/covalent/stargazers" target="_blank">
+            <md-icon svgIcon="assets:github" class="pad-right-xs"></md-icon>
+            <span *ngIf="starCount"><md-icon class="text-md tc-orange-A700">star</md-icon> {{starCount}}</span>
+          </a>-->
         </div>
         <div class="push-bottom-xl" hide-xs></div>
       </div>
@@ -363,13 +384,21 @@
           <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Code Generator - UDI Studio plugin</h2>
           <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
             <td-markdown>
-              * Automate everything * Strong and customizable metadata support * Output is tailored to your architecture & environment
-              * Agile development and Self-service support * Impact analyzer connectivity for even maintaining code up-to
-              date * Create templates and generate: * Scripts, DDLs, SQLs, TPT, XML * DI Tools objects via APIs * Transformations,
-              tests, dependencies * Offers complex template logic * From string replacement to program
+              * Automate everything 
+              * Strong and customizable metadata support 
+              * Output is tailored to your architecture & environment
+              * Agile development and Self-service support 
+              * Impact analyzer connectivity for even maintaining code up-to date 
+              * Create templates and generate: 
+                  * Scripts, DDLs, SQLs, TPT, XML 
+                  * DI Tools objects via APIs 
+                  * Transformations, tests, dependencies 
+              * Offers complex template logic 
+              * From string replacement to program
             </td-markdown>
+            <br><img src="..\app\assets\images\udi_architecture_cg.png" width="90%" height="90%" />
           </h4>
-          <br><img src="..\app\assets\images\udi_architecture_cg.png" width="90%" height="90%" />
+            <button md-raised-button color="orange" class="text-upper" tdMediaToggle="gt-xs" [mediaClasses]="['text-xxl']" [routerLink]="['/udicg']">See More...</button>
         </div>
         <div class="push-bottom-xl" hide-xs></div>
       </div>

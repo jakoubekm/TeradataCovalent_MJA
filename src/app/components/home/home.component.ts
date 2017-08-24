@@ -40,13 +40,20 @@ export class HomeComponent implements AfterViewInit {
       description: 'Teradata brand logo usage, color palettes and more',
       icon: 'color_lens',
       route: 'style-guide',
-      title: 'Style GuideXXX',
+      title: 'Style Guide',
     }, {
       color: 'green-A700',
       description: 'Gallery of example applications and usages',
       icon: 'view_carousel',
       route: 'templates',
       title: 'Templates',
+    },
+    {
+      color: 'green-A700',
+      description: 'UDI Impact Analyser plugin',
+      icon: 'view_carousel',
+      route: 'udiia',
+      title: 'UDI IA',
     },
   ];
 

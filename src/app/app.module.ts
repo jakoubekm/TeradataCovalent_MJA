@@ -8,7 +8,13 @@ import { TranslateModule, TranslateService, TranslateLoader } from '@ngx-transla
 
 import { DocsAppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { TemplatesComponent } from './components/templates/templates.component';
+//import { TemplatesComponent } from './components/templates/templates.component';
+//import { AbcTemplatesComponent } from './components/abctemplates/abctemplates.component';
+import { UdiIaComponent } from './components/udiia/udiia.component';
+import { UdiCgComponent } from './components/udicg/udicg.component';
+import { UdiContactComponent } from './components/udicontact/udicontact.component';
+import { UdiDownloadComponent } from './components/udidownload/udidownload.component';
+import { UdiUseCasesComponent } from './components/udiusecases/udiusecases.component';
 import { appRoutes, appRoutingProviders } from './app.routes';
 
 import { MdButtonModule, MdListModule, MdIconModule, MdCardModule, MdCoreModule, MdMenuModule, MdTabsModule,
@@ -30,7 +36,13 @@ import { getSelectedLanguage, createTranslateLoader } from './utilities/translat
   declarations: [
     DocsAppComponent,
     HomeComponent,
-    TemplatesComponent,
+    //TemplatesComponent,
+    //AbcTemplatesComponent,
+    UdiIaComponent,
+    UdiCgComponent,
+    UdiContactComponent,
+    UdiDownloadComponent,
+    UdiUseCasesComponent,
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     BrowserAnimationsModule,

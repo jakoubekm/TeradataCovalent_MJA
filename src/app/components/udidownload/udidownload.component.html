@@ -1,0 +1,53 @@
+<td-layout-nav logo="assets:teradata" toolbarTitle="UDI Studio - Download" navigationRoute="/">
+    <button md-icon-button td-menu-button tdLayoutToggle>
+        <md-icon>menu</md-icon>
+    </button>
+    <td-toolbar td-toolbar-content flex layout="row"></td-toolbar>
+      <!--MJA - sekce pauza-->
+      <section class="bgc-blue-grey-500">
+            <div layout="row">
+              <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+              </div>
+            </div>
+          </section>
+          <!--MJA - konec sekce pauza-->
+
+  <!--MJA - sekce pro CODE GENERATOR UDI Studia - obrazek vlevo, text vpravo-->
+  <section class="bgc-blue-grey-100">
+    <div layout="row">
+      <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
+        <div class="push-top-xxl" hide-xs></div>
+        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
+          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">UDI Studio download</h2>
+          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
+            <td-markdown>
+              * The current repository of product distribution is Teradata SubVersion. The repository has got a limited access for guests and is open for customers and prospects. If you want to test the product please use contact of Product Leader and Support.
+          </td-markdown>
+          <br><br> Download  : <a href="https://www.teradata.cz/svn/SVN_AS2016">SubVersion Repository for UDI Studio</a> 
+          </h4>
+        </div>
+        <div class="push-bottom-xl" hide-xs></div>
+      </div>
+      <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
+        <!--<md-icon class="mat-icon-svg-xxl fill-green-A700" svgIcon="assets:material-outline" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>-->
+        <div class="push-top-xxl" hide-xs></div>
+        <div layout-align="start center">
+          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
+          <!--<br><img src="..\app\assets\images\udi_cg.png">-->
+          <i class="material-icons md-300 blue600">file_download</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--MJA - konec sekce pro CODE GENERATOR UDI Studia - obrazek vlevo, text vpravo-->
+    
+      <!--MJA - sekce pauza-->
+      <section class="bgc-blue-grey-500">
+        <div layout="row">
+          <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
+          </div>
+        </div>
+      </section>
+      <!--MJA - konec sekce pauza-->
+
+</td-layout-nav>

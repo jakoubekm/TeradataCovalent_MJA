@@ -17,6 +17,27 @@ import { getDirection } from './utilities/direction';
 export class DocsAppComponent implements AfterViewInit {
 
   routes: Object[] = [{
+      icon: 'storage',
+      route: 'udiia',
+      title: 'UDI Impact Analyzer',
+    },{
+      icon: 'settings',
+      route: 'udicg',
+      title: 'UDI Code Generator',
+    },{
+      icon: 'library_books',
+      route: 'udiusecases',
+      title: 'UDI Use Cases',
+    },{
+      icon: 'file_download',
+      route: 'udidownload',
+      title: 'Download',
+    },{
+      icon: 'contacts',
+      route: 'udicontact',
+      title: 'Contacts',
+    },
+/* {
       icon: 'library_books',
       route: 'docs',
       title: 'Documentation',
@@ -36,8 +57,12 @@ export class DocsAppComponent implements AfterViewInit {
       icon: 'view_carousel',
       route: 'templates',
       title: 'Templates',
-    },
-  ];
+    },{
+      icon: 'view_carousel',
+      route: 'abctemplates',
+      title: 'AbcTemplates',
+    },*/
+];
 
   dir: string;
 
