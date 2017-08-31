@@ -1,38 +1,32 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-//import { TemplatesComponent } from './components/templates/templates.component';
-//MJA pridana sekce pro testovaci abctenplate
-/*import { AbcTemplatesComponent } from './components/abctemplates/abctemplates.component';*/
-import { UdiCgComponent } from './components/udicg/udicg.component';
-import { UdiIaComponent } from './components/udiia/udiia.component';
+// import { TemplatesComponent } from './components/templates/templates.component';
+// MJA pridana sekce pro testovaci abctenplate
+/* import { AbcTemplatesComponent } from './components/abctemplates/abctemplates.component';*/
 import { PdcContactComponent } from './components/pdccontact/pdccontact.component';
-import { UdiDownloadComponent } from './components/udidownload/udidownload.component';
-import { UdiUseCasesComponent } from './components/udiusecases/udiusecases.component';
+import { PdcDownloadComponent } from './components/pdcdownload/pdcdownload.component';
+import { PdcUseCasesComponent } from './components/pdcusecases/pdcusecases.component';
+import { PdcArchitectureComponent } from './components/pdcarchitecture/pdcarchitecture.component';
 
 import { SelectivePreloadingStrategyService } from './services';
-
 
 const routes: Routes = [{
   component: HomeComponent,
   path: '',
-},{
-  //MJA pridana sekce pro testovaci udicg
-  component: UdiCgComponent,
-  path: 'udicg',
 }, {
-  //MJA pridana sekce pro testovaci udiia
-  component: UdiIaComponent,
-  path: 'udiia',
-},{
-  //MJA pridana sekce pro testovaci udiia
-  component: UdiUseCasesComponent,
-  path: 'udiusecases',
+  // MJA pridana sekce pro testovaci udiia
+  component: PdcUseCasesComponent,
+  path: 'pdcusecases',
 }, {
+  // MJA pridana sekce pro testovaci udiia
+  component: PdcArchitectureComponent,
+  path: 'pdcarchitecture',
+},/* {
   //MJA pridana sekce pro testovaci udiia
-  component: UdiDownloadComponent,
-  path: 'udidownload',
-}, {
+  component: PdcDownloadComponent,
+  path: 'pdcdownload',
+},*/ {
   //MJA pridana sekce pro testovaci udiia
   component: PdcContactComponent ,
   path: 'pdccontact',

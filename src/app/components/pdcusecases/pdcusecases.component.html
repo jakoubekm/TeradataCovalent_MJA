@@ -1,16 +1,17 @@
-<td-layout-nav logo="assets:teradata" toolbarTitle="UDI Studio - Use cases" navigationRoute="/">
+<td-layout-nav logo="assets:teradata" toolbarTitle="PDC - Use cases" navigationRoute="/">
     <button md-icon-button td-menu-button tdLayoutToggle>
         <md-icon>menu</md-icon>
     </button>
+    <!-- toolbar  
     <td-toolbar td-toolbar-content flex layout="row"></td-toolbar>
-      <!--MJA - sekce pauza-->
+     
       <section class="bgc-blue-grey-500">
             <div layout="row">
               <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
               </div>
             </div>
           </section>
-          <!--MJA - konec sekce pauza-->
+    -->
 
   <!--MJA - sekce pro CODE GENERATOR UDI Studia - obrazek vlevo, text vpravo-->
   <section class="bgc-blue-grey-100">
@@ -18,11 +19,13 @@
       <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
         <div class="push-top-xxl" hide-xs></div>
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">UDI Studio Use Cases</h2>
+          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">PDC Use Cases</h2>
           <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
+            Process load management of:<br/><br/>
             <td-markdown>
-              * DevOps  process
-
+              * Data Warehouse load<br/>
+              * snapshot creation from Operational Data Store<br/>
+              * Data Lake ingestion
             </td-markdown>
           </h4>
         </div>

@@ -8,13 +8,10 @@ import { TranslateModule, TranslateService, TranslateLoader } from '@ngx-transla
 
 import { DocsAppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-//import { TemplatesComponent } from './components/templates/templates.component';
-//import { AbcTemplatesComponent } from './components/abctemplates/abctemplates.component';
-import { UdiIaComponent } from './components/udiia/udiia.component';
-import { UdiCgComponent } from './components/udicg/udicg.component';
 import { PdcContactComponent } from './components/pdccontact/pdccontact.component';
-import { UdiDownloadComponent } from './components/udidownload/udidownload.component';
-import { UdiUseCasesComponent } from './components/udiusecases/udiusecases.component';
+import { PdcDownloadComponent } from './components/pdcdownload/pdcdownload.component';
+import { PdcArchitectureComponent } from './components/pdcarchitecture/pdcarchitecture.component';
+import { PdcUseCasesComponent } from './components/pdcusecases/pdcusecases.component';
 import { appRoutes, appRoutingProviders } from './app.routes';
 
 import { MdButtonModule, MdListModule, MdIconModule, MdCardModule, MdCoreModule, MdMenuModule, MdTabsModule,
@@ -38,11 +35,10 @@ import { getSelectedLanguage, createTranslateLoader } from './utilities/translat
     HomeComponent,
     //TemplatesComponent,
     //AbcTemplatesComponent,
-    UdiIaComponent,
-    UdiCgComponent,
     PdcContactComponent,
-    UdiDownloadComponent,
-    UdiUseCasesComponent,
+    PdcDownloadComponent,
+    PdcUseCasesComponent,
+    PdcArchitectureComponent,
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     BrowserAnimationsModule,

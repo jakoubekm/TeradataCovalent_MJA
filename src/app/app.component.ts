@@ -8,7 +8,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { getSelectedLanguage } from './utilities/translate';
 import { getDirection } from './utilities/direction';
 
-
 @Component({
   selector: 'docs-covalent',
   templateUrl: './app.component.html',
@@ -17,24 +16,20 @@ import { getDirection } from './utilities/direction';
 export class DocsAppComponent implements AfterViewInit {
 
   routes: Object[] = [{
-      icon: 'storage',
-      route: 'udiia',
-      title: 'UDI Impact Analyzer',
-    },{
       icon: 'settings',
-      route: 'udicg',
-      title: 'UDI Code Generator',
-    },{
+      route: 'pdcarchitecture',
+      title: 'PDC architecture',
+    }, {
       icon: 'library_books',
-      route: 'udiusecases',
-      title: 'UDI Use Cases',
-    },{
+      route: 'pdcusecases',
+      title: 'PDC Use Cases',
+    }, /* {
       icon: 'file_download',
       route: 'udidownload',
       title: 'Download',
-    },{
+    },*/{
       icon: 'contacts',
-      route: 'udicontact',
+      route: 'pdccontact',
       title: 'Contacts',
     },
 /* {

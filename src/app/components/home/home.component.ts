@@ -17,7 +17,7 @@ export class HomeComponent implements AfterViewInit {
 
   starCount: number = 0;
 
-  sections: Object[] = [{
+  sections: Object[] = [/*{
       color: 'deep-purple-A400',
       description: 'Your guide to start using the UI platform in your app!',
       icon: 'library_books',
@@ -54,7 +54,7 @@ export class HomeComponent implements AfterViewInit {
       icon: 'view_carousel',
       route: 'udiia',
       title: 'UDI IA',
-    },
+    },*/
   ];
 
   repos: Object[] = [{
@@ -88,4 +88,3 @@ export class HomeComponent implements AfterViewInit {
   }
 
 }
-

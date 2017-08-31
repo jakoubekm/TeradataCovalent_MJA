@@ -1,10 +1,7 @@
-import { Component, HostBinding, AfterViewInit, ChangeDetectorRef } from '@angular/core';
-import { TdMediaService } from '@covalent/core';
+import { Component, HostBinding, AfterViewInit } from '@angular/core';
+import { GitHubService } from '../../services';
+
 import { fadeAnimation } from '../../app.animations';
-
-import { Observable } from 'rxjs/Observable';
-
-import { InternalDocsService, ITemplate } from '../../services';
 
 @Component({
   selector: 'app-templates',
@@ -18,17 +15,14 @@ export class PdcContactComponent implements AfterViewInit {
     @HostBinding('@routeAnimation') routeAnimation: boolean = true;
     @HostBinding('class.td-route-animation') classAnimation: boolean = true;
   
-    templatesObs: Observable<ITemplate[]>;
+      starCount: number = 0;
     
-      constructor(public media: TdMediaService,
-                  private _changeDetectorRef: ChangeDetectorRef,
-                  private _internalDocsService: InternalDocsService) {
-        this.templatesObs = this._internalDocsService.queryTemplates();
-      }
-    
-      ngAfterViewInit(): void {
-        this.media.broadcast();
-        this._changeDetectorRef.detectChanges();
-      }
+   constructor(private _gitHubService: GitHubService) {
   }
-  
+   
+   ngAfterViewInit(): void {
+    this._gitHubService.queryStartCount().subscribe((starsCount: number) => {
+      this.starCount = starsCount;
+    });
+  }
+}

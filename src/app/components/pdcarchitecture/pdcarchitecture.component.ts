@@ -8,12 +8,12 @@ import { InternalDocsService, ITemplate } from '../../services';
 
 @Component({
   selector: 'app-templates',
-  styleUrls: ['./udidownload.component.scss'],
-  templateUrl: './udidownload.component.html',
+  styleUrls: ['./pdcarchitecture.component.scss'],
+  templateUrl: './pdcarchitecture.component.html',
   animations: [fadeAnimation],
 })
 
-export class UdiDownloadComponent implements AfterViewInit {
+export class PdcArchitectureComponent implements AfterViewInit {
   
     @HostBinding('@routeAnimation') routeAnimation: boolean = true;
     @HostBinding('class.td-route-animation') classAnimation: boolean = true;
@@ -31,4 +31,3 @@ export class UdiDownloadComponent implements AfterViewInit {
         this._changeDetectorRef.detectChanges();
       }
   }
-  
