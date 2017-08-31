@@ -1,4 +1,4 @@
-<td-layout-nav logo="assets:teradata" toolbarTitle="UDI Studio">
+<td-layout-nav logo="assets:teradata" toolbarTitle="PDC">
   <button md-icon-button td-menu-button tdLayoutToggle>
     <!--tdLayoutToggle - obsahuje rolovaci menu umistene pod ikonou menu.
     './app.component.ts' - obsahuje hodnoty menu a route odkazy,
@@ -26,14 +26,15 @@
           <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
             <div layout="row" layout-align="start center">
               <h1 class="md-display-1 tc-orange-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['md-headline']">
-                UDI Studio for <span hide-xs>enterprise code automation </span> </h1>
+                Process Dispatch Center</h1>
             </div>
             <h2 class="md-headline tc-blue-grey-50 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
-              Teradata has developed a unique approach to building data storage solutions that support a common governance framework for
-              modeling, analysis, code development and testing across the entire data storage solution in heterogeneous environments.
-              This approach is called the Unified Data Integration (UDI) Framework.
-              <br><br> The approach is supported via product UDI Studio. The UDI studio is an installable application based
-              on Java includes a few plugins which support the model driven and templates methodology.
+              Process Dispatch Center (PDC) is controlling framework application. 
+              The main purpose of PDC is launching separate jobs in sequence based on their dependencies and priorities.
+              <br/><br/>  
+              It utilizes optimally systems resources and uses parallelism as much as possible.<br/> 
+              The frameworks logic takes care about optimal launch on job level, while the internal logic of the job itself is invisible to the framework.<br/>
+              
             </h2>
             <div class="push-top-xl" hide-xs></div>
             </div>
@@ -60,10 +61,10 @@
       <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
           <td-expansion-panel-group>
-            <td-expansion-panel label="" sublabel="definition and values">
+            <td-expansion-panel label="" sublabel="technical briefview">
               <ng-template td-expansion-panel-label>
                 <md-icon>star</md-icon>
-                <span><b>What is Code Automation?</b></span>
+                <span><b>How does it work?</b></span>
               </ng-template>
               <div layout="row">
                 <div class="md-padding">
@@ -72,139 +73,38 @@
                 </div>
                 <div class="md-padding">
                   <td-markdown>
-                    * Code Automation is an understood as specific practices values that has been proven to help organizations
-                      of all sizes improve their speed of code built, increasing code quality, elimination reverse engineering
-                      and define common governance for development and analyze process.
-                    * The independent code automation principles and tools are opening ability to use it for any code development
-                      in any frameworks and for rapid and traditional software delivery methodologies. 
-                    * Code automation beneficial effects go to positive impact for financial results go beyond financial results.
-                      Key positive effect is "more work in a short time with quicker repeatability". 
+               <p>Framework runs all jobs in the same manner &ndash; using a child process which interprets the content of the job command line 
+              &ndash; and waits for the job exit code.</p> 
+              <p>In dependency on the exit code the framework considers the job finished either successfully or failed. All necessary information needed by the framework is stored as metadata in Oracle database.</p>
                   </td-markdown>
                 </div>
               </div>
             </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="characteristics leading to high performance">
-              <ng-template td-expansion-panel-label>
-                <md-icon>star</md-icon>
-                <span><b>Why Code Automation?</b></span>
-              </ng-template>
-              <div layout="row">
-                <div class="md-padding">
-                  <br>
-                  <md-icon class="tc-blue-700">filter_2</md-icon>
-                </div>
-                <div class="md-padding">
-                  <td-markdown>
-                    * Automation is a huge asset for organizations
-                    * The unlimited architecture landscape and specific tools with possibility to change all in future without
-                      lost analyze values are perfect advocated position for code automation
-                    * Code automation requires to adopt the advance model driven methodology or with the basic technical metadata
-                      driven methodology determine the level of final performance and the level of effect opposite the manual
-                      or semi-manual code development
-                    * High-performance teams continue to achieve rapid development and better stability
-                    * Code Automation is a general direction to open for use future progressive techniques like machine learning
-                      algorithms (code generates code)
-                  </td-markdown>
-                </div>
-              </div>
-            </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="teradata solution basic introduction">
-              <ng-template td-expansion-panel-label>
-                <md-icon>star</md-icon>
-                <span><b>Code Automation with UDI Studio</b></span>
-              </ng-template>
-              <div layout="row">
-                <div class="md-padding">
-                  <br>
-                  <md-icon class="tc-blue-700">filter_3</md-icon>
-                </div>
-                <div class="md-padding">
-                  <td-markdown>
-                    * Background
-                        * The purpose of with UDI Studio is to achieve Code Automation independent of technology, tool or architecture.
-                        The key dependency is join with inputs of the process. This is metadata and its guaranteed quality.
-                    * Target
-                        * The UDI Studio provide capability for auto or manually generate scripts, tests, documentation and others
-                        determined outputs from metadata. 
-                        * The concept targets are to use as an isolate and reusable component for different delivery approaches
-                        or methodologies like DevOps. The concept supports interfaces for delivered inputs and finally for
-                        outputs via versioning systems as an independent and transparent team and tools cooperation platforms.
-                    * Intelectual Property Ownership
-                        * Teradata/Enterprise Data Consulting own the IP for this tool and make it available to customers for
-                        adoption and roll out.
-                  </td-markdown>
-                </div>
-              </div>
-            </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="what is this thing?">
-              <ng-template td-expansion-panel-label>
-                <md-icon>star</md-icon>
-                <span><b>What is UDI concept?</b></span>
-              </ng-template>
-              <!--<div class="md-padding"><img src="..\app\assets\images\udi_ia.png"></div>-->
-              <div layout="row">
-                <div class="md-padding">
-                  <md-icon class="tc-blue-700">filter_4</md-icon>
-                </div>
-                <div class="md-padding">
-                  <span>The core UDI concept is based on the general Model Driven Development methodology and adheres to its basic characteristics. 
-                        In the UDI concept, it is required that the creation of the physical model and source-to-target (S2T) mapping prescriptions is part of the solution. 
-                        UDI supports the adoption of these required components through the use of methodology, examples, customer training and mentoring. 
-                        The UDI framework is built as a platform, independent of technology. It satisfies all specific customer requirements that the data storage solution has to meet. This independence allows freedom in the architecture design of the data storage solution and in the selection of tools and technology. 
-                        The UDI framework contains both a methodical and a practical aspect. The entire set of tools and documentation supports prototyping, reusability and maximizes the amount of automation in solution development and maintenance.
-                      </span>
-                </div>
-
-              </div>
-            </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="what is and what isn't the tool?">
-              <ng-template td-expansion-panel-label>
-                <md-icon>star</md-icon>
-                <span><b>What is UDI Studio?</b></span>
-              </ng-template>
-              <div layout="row">
-                <div class="md-padding">
-                  <md-icon class="tc-blue-700">filter_5</md-icon>
-                  <!--<md-icon class="tc-green-700">thumb_up</md-icon>-->
-                  <!--MJA - ikona palec nahoru-->
-                </div>
-                <div class="md-padding">
-                  <span>UDI Studio is:</span>
-                  <td-markdown>
-                    * Accelerator - for code development and code maintenance
-                    * Development Environment- effectively automate code creation
-                    * Metadata base processor - works with metadata database or transformation - not actual data
-                  </td-markdown>
-                  <span>UDI Studio is not:</span>
-                  <td-markdown>
-                    * ETL Tool, Data ingestion tool, Pre-built architecture
-                  </td-markdown>
-                </div>
-              </div>
-            </td-expansion-panel>
+ 
             <td-expansion-panel label="" sublabel="what are benefits?">
               <ng-template td-expansion-panel-label>
                 <md-icon>star</md-icon>
-                <span><b>Why UDI Studio?</b></span>
+                <span><b>Why PDC?</b></span>
               </ng-template>
               <div layout="row">
                 <div class="md-padding">
-                  <md-icon class="tc-blue-700">filter_6</md-icon>
+                  <md-icon class="tc-blue-700">filter_2</md-icon>
                   <!--<md-icon class="tc-green-700">thumb_up</md-icon>-->
                   <!--MJA - ikona palec nahoru-->
                 </div>
                 <div class="md-padding">
-                  <span>Features:</span>
                   <td-markdown>
-                    * Common governance of data storage solutions using UDI framework
-                    * Software Development Lifecycle support
-                    * General methodology for
-                    * Support of various development principles
-                    * Technologically independent
-                    * Automatic output generation
-                    * Licensed and supported automation tools
-                    * Matured solution with references
-                    * Adoption of existing solution architecture
+					* Practical experience &ndash; more than 9 installations yet
+					* Unified control of all launched processes &ndash; IPC jobs, Perl script, bteq scripts,...
+					* Unlimited &ndash; extension possibilities
+					* Open solution &ndash; control logic and metadata stored in database
+					* Simple GUI interface
+					* Dynamic processing control with reference to:
+						* Minimal processing duration
+						* Job&lsquo;s dependency
+						* SLA and processing priority respecting
+						* Thresholds for duration and finish are set according to last runs
+
                   </td-markdown>
                 </div>
               </div>
@@ -217,25 +117,20 @@
   </section>
 
 
-  <!--MJA - sekce pro architeckturu UDI Studia - obrazek vlevo, text vpravo-->
+  <!--MJA - sekce pro architeckturu PDC - obrazek vlevo, text vpravo-->
   <section class="bgc-blue-grey-800 tc-white">
     <div layout="row">
       <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
         <!--<div class="push-top-xxl" hide-xs></div>-->
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h2 class="md-display-1 tc-orange-600 push-top-xs push-bottom-sm">UDI Studio
+          <h2 class="md-display-1 tc-orange-600 push-top-xs push-bottom-sm">PDC
             <md-icon>favorite</md-icon> architecture</h2>
           <h4 class="md-headline tc-blue-grey-100 push-top-xs push-bottom-sm">
             <td-markdown>
-              * UDI studio is a Java NetBeans platform based tool extensible by plugins. 
-              * Usually used as desktop Java application on client computer 
-              * UDI studio supports standard Java connectors for structured data and metadata sources (Teradata, Oracle, MS SQL, Derby, Hive,…) 
-              * Team based cooperation features allow 
-              * Parallel team development via versio control native integration 
-              * Reusability of approaches from delivered projects
+ 				The basic concept of PDC framework parts is shown in the picture below:
             </td-markdown>
           </h4>
-          <img src="..\app\assets\images\udi_architecture_black.png" width="90%" height="90%" />
+          <img src="app\assets\images\pdc_architecture_black.png" width="90%" height="90%" />
         </div>
       </div>
       <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
@@ -246,9 +141,9 @@
       </div>
     </div>
   </section>
-  <!--MJA - konec sekce pro architeckturu UDI Studia - obrazek vlevo, text vpravo-->
+  <!--MJA - konec sekce pro architeckturu PDC - obrazek vlevo, text vpravo-->
 
-  <!--MJA - sekce pro List vlastnosti architecktury UDI Studia-->
+  <!--MJA - sekce pro List vlastnosti architecktury PDC-->
   <section class="bgc-blue-grey-500">
     <div layout="row">
       <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
@@ -257,71 +152,94 @@
             <td-expansion-panel label="" sublabel="definition and values">
               <ng-template td-expansion-panel-label>
                 <md-icon>filter_list</md-icon>
-                <span><b> UDI Studio - Local Computer</b></span>
+                <span><b>PDC - Engine</b></span>
               </ng-template>
               <div layout="row">
                 <div class="md-padding">
-                  <p>Engine</p>
+                  <p><b>Worker</b> of PDC</p>
                   <td-markdown>
-                    * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                    their speed of code built, increasing code quality, elimination reverse engineering and define common
-                    governance for development and analyze process. 
-                    ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                    3.xx.xx-setup.exe 
-                    ```
+						* Controlled by Scheduler
+						* Responsible for:
+							* Job launch
+							* Job supervise
+							* Metadata update
+						* Written in PERL
+						* 1 to N systems (ETL servers) can consume jobs
                   </td-markdown>
-                  <br>
-                  <p>Metadata - Local folder</p>
-                  <td-markdown>
-                      * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                      their speed of code built, increasing code quality, elimination reverse engineering and define common
-                      governance for development and analyze process. 
-                      ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                      3.xx.xx-setup.exe 
-                      ```
-                    </td-markdown>
                 </div>
               </div>
             </td-expansion-panel>
             <td-expansion-panel label="" sublabel="definition and values">
               <ng-template td-expansion-panel-label>
                 <md-icon>filter_list</md-icon>
-                <span><b> UDI Studio Metadata - Remote Server</b></span>
+                <span><b>PDC - Metadata Repository</b></span>
               </ng-template>
               <div layout="row">
                 <div class="md-padding">
-                    <p>Metadata Remote storage</p>
-                    <td-markdown>
-                        * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                        their speed of code built, increasing code quality, elimination reverse engineering and define common
-                        governance for development and analyze process. 
-                        ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                        3.xx.xx-setup.exe 
-                        ```
-                      </td-markdown>
-                      <p>Team Based Environment</p>
-                      <td-markdown>
-                          * Code Automation is an understood as specific practices values that has been proven to help organizations of all sizes improve
-                          their speed of code built, increasing code quality, elimination reverse engineering and define common
-                          governance for development and analyze process. 
-                          ```runnable program ..\UDIStudio\ readme.txt UDIStudio
-                          3.xx.xx-setup.exe 
-                          ```
-                        </td-markdown>
+                  <p><b>Brain</b> of PDC application</p>
+                  <td-markdown>
+					* Job selection for launching
+					* Controlled by metadata
+					* Logic stored in procedures
+					* Chooses jobs for processing regarding to:
+						 * Calendar
+						 * Dependency
+						 * Priority
+						 * Locks
+						 * Parallelism control
+						 * Calendar
+					 * Written in Orale PL/SQL
+                  </td-markdown>
                 </div>
               </div>
             </td-expansion-panel>
-            <td-expansion-panel label="" sublabel="components and results overview">
-                <ng-template td-expansion-panel-label>
-                  <md-icon>filter_list</md-icon>
-                  <span><b> UDI Studio Principles</b></span>
-                </ng-template>
-                <div layout="row">
-                  <div class="md-padding">
-                    <img src="..\app\assets\images\udi_architecture_princ.png" />
-                  </div>
+            <td-expansion-panel label="" sublabel="definition and values">
+              <ng-template td-expansion-panel-label>
+                <md-icon>filter_list</md-icon>
+                <span><b>PDC - GUI</b></span>
+              </ng-template>
+              <div layout="row">
+                <div class="md-padding">
+                  <p><b>User interface</b> of PDC application</p>
+                  <td-markdown>
+					WEB based application for:
+					* Monitoring
+						* Streams
+						* Jobs
+					* Controlling
+						* Scheduler
+						* Application access right
+						* Job�s processing
+					* Multiple Engine support
+					* Access permissions
+					* Metadata change
+					* Change management
+                  </td-markdown>
                 </div>
-              </td-expansion-panel>
+              </div>
+            </td-expansion-panel>
+            <td-expansion-panel label="" sublabel="definition and values">
+              <ng-template td-expansion-panel-label>
+                <md-icon>filter_list</md-icon>
+                <span><b>PDC - Framework Checker</b></span>
+              </ng-template>
+              <div layout="row">
+                <div class="md-padding">
+                  <p><b>Eyesight</b> of PDC application</p>
+                  <td-markdown>
+					* Independent supervising process
+					* Checking of correctness of:
+						* Processing initialization
+						* Scheduler
+						* Engine
+						* Job execution
+						* Job behavior
+					* SNMP alert
+					* Written in PERL
+                  </td-markdown>
+                </div>
+              </div>
+            </td-expansion-panel>
           </td-expansion-panel-group>
         </div>
       </div>
@@ -329,324 +247,6 @@
   </section>
   <!--MJA - konec sekce pro List vlastnosti architecktury UDI Studia -->
 
-  <!--MJA - sekce pro IMPACT ANALYSER UDI Studia - obrazek vlevo, text vpravo-->
-  <section class="bgc-blue-grey-100">
-    <div layout="row">
-      <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
-        <div class="push-top-xxl" hide-xs></div>
-        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Impact Analyser - UDI Studio plugin</h2>
-          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
-            <td-markdown>
-              * Extracts analytical metadata from various analytical and mapping documents and tools (Power Designer, Erwin, XML, Excel…)
-              * Populates shared analytical metadata repository for further usage 
-              * Works with object dependencies and hierarchies
-              * Detects change impacts on code and database structures through entire solution 
-              * Clearly determines scope for development, testing and deployment phases 
-              * Provides full and diff customizable reports by comparison of any versions of analytical metadata
-            </td-markdown>
-            <br><img src="..\app\assets\images\udi_architecture_ia.png" width="90%" height="90%" />
-          </h4>
-          <button md-raised-button color="orange" class="text-upper" tdMediaToggle="gt-xs" [mediaClasses]="['text-xxl']" [routerLink]="['/udiia']">See More...</button>
-          <!--<a md-raised-button color="primary" class="push-left" tdMediaToggle="gt-xs" [mediaClasses]="['text-xxl']" mdTooltip="Star us on Github!" mdTooltipPosition="below" href="https://github.com/Teradata/covalent/stargazers" target="_blank">
-            <md-icon svgIcon="assets:github" class="pad-right-xs"></md-icon>
-            <span *ngIf="starCount"><md-icon class="text-md tc-orange-A700">star</md-icon> {{starCount}}</span>
-          </a>-->
-        </div>
-        <div class="push-bottom-xl" hide-xs></div>
-      </div>
-      <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
-        <div class="push-top-xxl" hide-xs></div>
-        <div layout-align="start center">
-          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
-          <i class="material-icons md-300 blue600">storage</i>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--MJA - konec sekce pro IMPACT ANALYSER UDI Studia - obrazek vlevo, text vpravo-->
-
-  <!--MJA - sekce pauza-->
-  <section class="bgc-blue-grey-500">
-    <div layout="row">
-      <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
-      </div>
-    </div>
-  </section>
-  <!--MJA - konec sekce pauza-->
-
-  <!--MJA - sekce pro CODE GENERATOR UDI Studia - obrazek vlevo, text vpravo-->
-  <section class="bgc-blue-grey-100">
-    <div layout="row">
-      <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
-        <div class="push-top-xxl" hide-xs></div>
-        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Code Generator - UDI Studio plugin</h2>
-          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
-            <td-markdown>
-              * Automate everything 
-              * Strong and customizable metadata support 
-              * Output is tailored to your architecture & environment
-              * Agile development and Self-service support 
-              * Impact analyzer connectivity for even maintaining code up-to date 
-              * Create templates and generate: 
-                  * Scripts, DDLs, SQLs, TPT, XML 
-                  * DI Tools objects via APIs 
-                  * Transformations, tests, dependencies 
-              * Offers complex template logic 
-              * From string replacement to program
-            </td-markdown>
-            <br><img src="..\app\assets\images\udi_architecture_cg.png" width="90%" height="90%" />
-          </h4>
-            <button md-raised-button color="orange" class="text-upper" tdMediaToggle="gt-xs" [mediaClasses]="['text-xxl']" [routerLink]="['/udicg']">See More...</button>
-        </div>
-        <div class="push-bottom-xl" hide-xs></div>
-      </div>
-      <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
-        <!--<md-icon class="mat-icon-svg-xxl fill-green-A700" svgIcon="assets:material-outline" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>-->
-        <div class="push-top-xxl" hide-xs></div>
-        <div layout-align="start center">
-          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
-          <!--<br><img src="..\app\assets\images\udi_cg.png">-->
-          <i class="material-icons md-300 blue600">settings</i>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--MJA - konec sekce pro CODE GENERATOR UDI Studia - obrazek vlevo, text vpravo-->
-
-  <!--MJA - sekce tool baru s vetsimi ikonami-->
-  <!--
-  <section class="bgc-blue-grey-900">
-    <div layout-gt-xs="row">
-      <div flex class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad']">
-        <div class="push-top-xl" hide-xs></div>
-        <div tdMediaToggle="gt-sm" [mediaClasses]="['push-md']">
-          <md-nav-list hide-gt-sm class="theme-dark">
-            <ng-template let-item let-last="last" ngFor [ngForOf]="repos">
-              <a md-list-item href="{{item.link}}" target="_blank">
-                <md-icon md-list-avatar><span class="tc-{{item.color}}">{{item.icon}}</span></md-icon>
-                <h3 class="tc-white" md-line> {{item.title}} </h3>
-                <p class="tc-white" md-line> {{item.description}} </p>
-              </a>
-              <md-divider *ngIf="!last" md-inset></md-divider>
-            </ng-template>
-          </md-nav-list>
-          <div layout="row" layout-wrap hide-xs hide-sm>
-            <ng-template let-item let-last="last" ngFor [ngForOf]="repos">
-              <div flex-gt-sm="33" class="pad-sm">
-                <a href="{{item.link}}" target="_blank" md-button class="pad">
-                  <div layout="row">
-                    <md-icon class="mat-icon-md" tdMediaToggle="gt-sm" [mediaClasses]="['push-right-sm']">
-                      <span class="tc-{{item.color}}">{{item.icon}}</span>
-                    </md-icon>
-                    <div class="tc-white text-left text-wrap">
-                      <div class="md-title push-bottom-xs">{{item.title}}</div>
-                      <div class="md-subhead" hide-sm hide-md> {{item.description}} </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </ng-template>
-          </div>
-        </div>
-        <div class="push-bottom-xl" hide-xs></div>
-      </div>
-    </div>
-  </section>
--->
-  <!--MJA - konec sekce tool baru s vetsimi ikonami-->
-  
-  <!--MJA - pauza/mezera mezi bloky-->
-  <!--
-  <section class="bgc-blue-grey-500">
-    <div layout="row">
-      <div flex flex-order-xs="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xs', 'pad-left-xl']">
-      </div>
-    </div>
-  </section>-->
-  <!--MJA - konec pauza/mezera mezi bloky-->
-
-  <!--MJA - sekce pro FQs -->
-  <!--
-  <section class="theme-dark tc-white bgc-blue-grey-900">
-    <div layout-gt-xs="row">
-      <div flex class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
-        <div class="push-top-xl" hide-xs></div>
-        <h3 class="md-title">FAQs</h3>
-        <td-expansion-panel-group>
-          <td-expansion-panel label="What is Covalent?" sublabel="what is this thing?">
-            <div class="md-padding">
-              Covalent is a UI Platform that combines proven design language with a comprehensive web framework, built on Angular & Angular-Material
-              (Design). Covalent gives you a quickstart to build a modern web application UI and ensure consistency across
-              your enterprise products. Some of Covalent's most important features include:
-              <ul>
-                <li>Angular-Material</li>
-                <li>Angular Command-line interface (CLI) for builds, deploys, testing & more.</li>
-                <li>Drastically simplified interface layouts (for dashboards, lists, etc).</li>
-                <li>Custom web components (stepper, file upload, expansion panels & more).</li>
-                <li>750+ Material Design icons.</li>
-                <li>Style Guide with brand standards, color palettes & tips.</li>
-                <li>Design Patterns for consistent, reusable web components such as cards, forms, etc.</li>
-                <li>Testing Tools for both unit tests and end-to-end tests.</li>
-                <li>Quickstart app to get started right away!</li>
-              </ul>
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="Why Covalent?" sublabel="what's up with that name?">
-            <div class="md-padding">
-              We follow Atomic Design principles and apply them to Angular-Material web components. In Atomic Design, several atoms (such
-              as buttons and inputs) form molecules (such as a search box). Our covalent bonds are the molecules that we're
-              building on top of Angular-Material. Also, covalent bonds are liquid and conform to their container, just like
-              our responsive layouts!
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="Why would I use this?" sublabel="can't I just build my own?">
-            <div class="md-padding">
-              By using Covalent as a unified UI Platform there are a ton of benefits. Here are some highlights:
-              <ul>
-                <li>Angular-Material doesn't have a full app quickstart. <a href="https://teradata.github.io/covalent-quickstart/">Covalent does</a>.</li>
-                <li>Covalent provides the Angular-Material (AngularJS) flexbox layout that was removed in Angular-Material (angular).</li>
-                <li>Covalent provides several custom components such as steppers & expansion panels.</li>
-                <li>Custom layouts & components in Covalent are developed specifically for enterprise solutions.</li>
-                <li>Covalent provides a selection of UI layouts out of the box.</li>
-                <li>Our team is continuously adding tools like Syntax Highlighting & Markdown.</li>
-                <li>Our team will always maintain native compatibility with Angular & Material </li>
-                <li>Our team will always follow the principles of the official Material Design spec.</li>
-              </ul>
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="Why Material Design?" sublabel="what's so great about Material?">
-            <div class="md-padding">
-              By adopting Material Design along with Angular, we get a style guide spec that is perfectly matched with an incredbly powerful
-              and modern web framework, all for free. Along with that, there are lots of other great benefits such as:
-              <ul>
-                <li>A design spec that is married to code implementation.</li>
-                <li>Official implementations from the the designer/developer (Google).</li>
-                <li>Free code implementation and updates from a continuously evolving design spec.</li>
-                <li>Compatability with many devices & breakpoints, from watch and mobile all the way up to fullscreen desktop.</li>
-                <li>Usage familiarity for users, designers & developers.</li>
-                <li>Focus on out-of the box accessibility.</li>
-                <li>Open sourced design & code.</li>
-                <li>Modularity that gives a natural bridge to agile development principles.</li>
-                <li>Inspiration, community & resources from around the world.</li>
-              </ul>
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="But won't we look like Google?" sublabel="great question, you're not alone in that concern">
-            <div class="md-padding">
-              With any new framework, people's intial reaction is that they'll lose their company brand or identity. Consider when 960
-              grids came out, or Bootstrap from Twitter. Many said "all sites will look the same!". They weren't completely
-              wrong, for a time, when adoption of these new frameworks began. However, with time, usage, and innovation,
-              your special brand identity and uniqueness will always shine through! Also consider:
-              <ul>
-                <li>Material Design is being embraced across the web, and is not specific to Google anymore</li>
-                <li>Material Design can be thought of as a native Web SDK, similar to developing a MacOS or iOS app.</li>
-                <li>Onboarding users is a simpler process if design patterns are familiar.</li>
-                <li>Think of your favorite iOS, Android or Windows app that adheres to the OS's design. Aren’t the features more
-                  important? What woud you really consider “brand”?</li>
-              </ul>
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="Why Angular?" sublabel="why not React/Ember/Java/etc?">
-            <div class="md-padding">
-              <p>The short answer: we had to pick something & we believe Angular has won the adoption war.</p>
-              The longer answer: Before passing judgement if you have Angular 1.x experience, remember that Angular v2+ is a complete rewrite
-              from the ground up. Angular moved from an opinionated framework to a sophistated platform. Angular utilizes
-              ES2015 (previously ES6) and the power of Typescript, which results in a much more native JavaScript platform
-              with coding paradigms & power previously reserved for backend languages. This means many more back end engineers
-              can jump into the front end and ramp up quickly to productivity. Also there are many other benefits, such as:
-              <ul>
-                <li>New & exciting software to learn & advocate</li>
-                <li>More easily attract new hires</li>
-                <li>An incredibly powerful standardized CLI that is provided to us</li>
-                <li>More powerful IDEs for development</li>
-                <li>Integrated testing tools</li>
-                <li>Native mobile & desktop app support</li>
-              </ul>
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="What's not included?" sublabel="what is my team responsible for building?">
-            <div class="md-padding">
-              We give you everything you need to quickly get started on your UI, but you have the domain knowledge and are the expert in
-              your product. You'll need to build all the custom views, controllers & services for your product, and hook
-              them up to your RESTful APIs. Don't worry though, we have detailed docs & tips, and there's a wealth of help
-              on the internet (it's why we chose such a popular platform).
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="Can I help build Covalent?" sublabel="heck yeah!">
-            <div class="md-padding">
-              We'd LOVE any type of contribution and collaboration! There's all kinds of ways you can join in:
-              <ul>
-                <li>Submit a bug (cool)</li>
-                <li>Open a pull request to fix a bug (cooler)</li>
-                <li>Suggest a new feature (which we'll prioritize by demand)</li>
-                <li>Open a pull request with new feature (make sure it follows the guidelines)</li>
-                <li>Give us feedback on any aspect of this site or the platform</li>
-                <li><a href="http://www.teradata.com/careers/" target="_blank">Join the Teradata UX team!</a></li>
-              </ul>
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="What is the full vision?" sublabel="good news: we've put some thought into it">
-            <div class="md-padding">
-              <md-card>
-                <md-card-content>
-                  <div class="md-subhead">
-                    To build an atomic, standardized, reusable UI component platform based on Material Design, for Teradata to use for all user
-                    interfaces, while collaborating in an open source model.
-                  </div>
-                </md-card-content>
-              </md-card>
-              <div class="md-padding">
-                Teradata's UX team is extremely lean & agile (notice agile is lower case). We have a simple list of milestones and issues
-                prioritized by demand across products. Some big ticket items are underway such as TD Charts, an extensive
-                & standardized component built on Google Charts (continuing w/ the Google web stack). We're also building
-                Dynamic Forms which will allow products to build complex forms with a simple key:value pair JSON structure.
-                Remember, we're agile so our roadmap is iterative & bite sized for frequent, rapid releases.
-              </div>
-            </div>
-            <md-nav-list>
-              <a md-list-item href="https://github.com/teradata/covalent/releases" target="_blank">
-                <md-icon>launch</md-icon>
-                <h3 md-line>Releases</h3>
-                <p md-line>Our latest version you can use today!</p>
-              </a>
-              <md-divider></md-divider>
-              <a md-list-item href="https://github.com/teradata/covalent/milestones" target="_blank">
-                <md-icon>launch</md-icon>
-                <h3 md-line>Milestones</h3>
-                <p md-line>Rough time estimates</p>
-              </a>
-              <md-divider></md-divider>
-              <a md-list-item href="https://github.com/teradata/covalent/issues" target="_blank">
-                <md-icon>launch</md-icon>
-                <h3 md-line>Feature Requests & Bugs</h3>
-                <p md-line>Priotized by demand</p>
-              </a>
-            </md-nav-list>
-          </td-expansion-panel>
-          <td-expansion-panel label="Does Covalent support desktop apps?" sublabel="Build desktop apps with Covalent Electron">
-            <div class="md-padding">
-              Covalent is a UI Platform that combines proven design language with a comprehensive web framework, built on Angular & Angular-Material
-              (Design). Electron is a framework for creating native desktop applications with web technologies like JavaScript,
-              HTML, and CSS. Covalent Electron is the Electron Platform to build desktop apps using Covalent and Electron
-              <a md-button color="primary" href="https://github.com/Teradata/covalent-electron" target="_blank">View Repo</a>
-            </div>
-          </td-expansion-panel>
-          <td-expansion-panel label="Is a backend API required?" sublabel="Mock API endpoints with Covalent Data">
-            <div class="md-padding">
-              Covalent Data is a Mock API server for rapid prototyping and API standards Built on Golang Allows for quick prototyping for
-              your Covalent Applications with an easy to mock http backend server
-              <a md-button color="primary" href="https://github.com/Teradata/covalent-data" target="_blank">View Repo</a>
-            </div>
-          </td-expansion-panel>
-        </td-expansion-panel-group>
-        <div class="push-bottom-xl" hide-xs></div>
-      </div>
-    </div>
-  </section>
--->
- <!--MJA - konec sekce pro FQs -->
 
   <td-layout-footer color="primary" tdMediaToggle="xs" [mediaClasses]="['text-center']">
     <div layout-gt-xs="row" layout-align="start center">
