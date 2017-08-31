@@ -8,12 +8,12 @@ import { InternalDocsService, ITemplate } from '../../services';
 
 @Component({
   selector: 'app-templates',
-  styleUrls: ['./udicontact.component.scss'],
-  templateUrl: './udicontact.component.html',
+  styleUrls: ['./pdccontact.component.scss'],
+  templateUrl: './pdccontact.component.html',
   animations: [fadeAnimation],
 })
 
-export class UdiContactComponent implements AfterViewInit {
+export class PdcContactComponent implements AfterViewInit {
   
     @HostBinding('@routeAnimation') routeAnimation: boolean = true;
     @HostBinding('class.td-route-animation') classAnimation: boolean = true;

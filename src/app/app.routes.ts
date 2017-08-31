@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 /*import { AbcTemplatesComponent } from './components/abctemplates/abctemplates.component';*/
 import { UdiCgComponent } from './components/udicg/udicg.component';
 import { UdiIaComponent } from './components/udiia/udiia.component';
-import { UdiContactComponent } from './components/udicontact/udicontact.component';
+import { PdcContactComponent } from './components/pdccontact/pdccontact.component';
 import { UdiDownloadComponent } from './components/udidownload/udidownload.component';
 import { UdiUseCasesComponent } from './components/udiusecases/udiusecases.component';
 
@@ -34,8 +34,8 @@ const routes: Routes = [{
   path: 'udidownload',
 }, {
   //MJA pridana sekce pro testovaci udiia
-  component: UdiContactComponent,
-  path: 'udicontact',
+  component: PdcContactComponent ,
+  path: 'pdccontact',
 },{
   path: '**', redirectTo: '/',
 },

@@ -12,7 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 //import { AbcTemplatesComponent } from './components/abctemplates/abctemplates.component';
 import { UdiIaComponent } from './components/udiia/udiia.component';
 import { UdiCgComponent } from './components/udicg/udicg.component';
-import { UdiContactComponent } from './components/udicontact/udicontact.component';
+import { PdcContactComponent } from './components/pdccontact/pdccontact.component';
 import { UdiDownloadComponent } from './components/udidownload/udidownload.component';
 import { UdiUseCasesComponent } from './components/udiusecases/udiusecases.component';
 import { appRoutes, appRoutingProviders } from './app.routes';
@@ -40,7 +40,7 @@ import { getSelectedLanguage, createTranslateLoader } from './utilities/translat
     //AbcTemplatesComponent,
     UdiIaComponent,
     UdiCgComponent,
-    UdiContactComponent,
+    PdcContactComponent,
     UdiDownloadComponent,
     UdiUseCasesComponent,
   ], // directives, components, and pipes owned by this NgModule
