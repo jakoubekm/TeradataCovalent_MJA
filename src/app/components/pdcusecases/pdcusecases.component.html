@@ -20,7 +20,7 @@
         <div class="push-top-xxl" hide-xs></div>
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
           <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">PDC Use Cases</h2>
-          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
+          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
             Process load management of:<br/><br/>
             <td-markdown>
               * Data Warehouse load<br/>
@@ -34,10 +34,8 @@
       <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
         <!--<md-icon class="mat-icon-svg-xxl fill-green-A700" svgIcon="assets:material-outline" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>-->
         <div class="push-top-xxl" hide-xs></div>
-        <div layout-align="start center">
-          <h2 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h2>
-          <!--<br><img src="..\app\assets\images\udi_cg.png">-->
-          <i class="material-icons md-300 blue600">library_books</i>
+        <div layout="row" layout-align="end start">
+          <md-icon class="md-300 blue600">library_books</md-icon>
         </div>
       </div>
     </div>

@@ -18,21 +18,21 @@
       <div flex flex-order="2" class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
         <div class="push-top-xxl" hide-xs></div>
         <div tdMediaToggle="gt-sm" [mediaClasses]="['push-lg']">
-          <h3 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Contacts</h3>
-          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
+          <h2 class="md-display-1 tc-blue-A700 push-top-xs push-bottom-sm">Contacts</h2>
+          <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
             <br><b>Product Leader and Support</b>
             <br>contact : Milan Budka
             <br>phone   : +420 601 321 735
             <br>email   : <a href="mailto:milan.budka@teradata.com">martin.pies@teradata.com</a>
             </h4>
             <br>
-       <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
+       <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
               <br><b>Product Team Member</b>
               <br>contact : Tomáš Ploužek
               <br>phone   : +420 603 744 951
               <br>email   : <a href="mailto:tomas.plouzek@teradata.com">tomas.plouzek@teradata.com</a>
               </h4>
-       <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" hide-xs>
+       <h4 class="md-headline tc-blue-grey-600 push-top-xs push-bottom-sm" tdMediaToggle="xs" [mediaClasses]="['text-lg']">
               <br><b>Product Team Member</b>
               <br>contact : Petr Štefánek
               <br>phone   : +420 602 117 900
@@ -52,10 +52,8 @@
       <div flex="30" flex-xs="20" flex-order="1" layout-gt-xs="column" layout-align="start center" tdMediaToggle="gt-xs" [mediaClasses]="['pad-top-xl', 'pad-bottom-xl', 'pad-left-xl']">
         <!--<md-icon class="mat-icon-svg-xxl fill-green-A700" svgIcon="assets:material-outline" tdMediaToggle="xs" [mediaClasses]="['push-top', 'push-left']"></md-icon>-->
         <div class="push-top-xxl" hide-xs></div>
-        <div layout-align="start center">
-          <h3 class="md-display-1 tc-red-500 push-top-xs push-bottom-sm"> </h3>
-          <!--<br><img src="..\app\assets\images\udi_cg.png">-->
-          <i class="material-icons md-300 blue600">contacts</i>
+        <div layout="row" layout-align="end start" style="position:relative;top: 20px;">
+          <md-icon class="md-300 blue600">contacts</md-icon>
         </div>
       </div>
     </div>
